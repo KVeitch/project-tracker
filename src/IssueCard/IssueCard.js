@@ -1,7 +1,6 @@
 import React from 'react';
 
-const IssueCard = ({info}) => {
-  const { title } = info
+const IssueCard = ({title}) => {
   return(
     <section className="section__issue">
       <h2>{title}</h2>
