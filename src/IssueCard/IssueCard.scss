@@ -1,0 +1,34 @@
+@import '../variables.scss';
+
+.section__issue--description {
+  height:170px;
+  overflow:hidden;
+}
+.section__issue {
+  width: 270px;
+  height: 300px;
+  border-radius: $br;
+  border: 2px solid black;
+  margin:10px 5px;
+  display:inline-block;
+  padding: 10px;
+  box-shadow: 5px 8px 10px gray;
+
+  .section__issue--title {
+    margin-bottom:12px;
+    border-bottom:1px solid black;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top:15px;
+    align-self: end;
+    
+    button {
+      height:30px;
+      width:120px;
+      font-size: 1em;
+    }
+  }
+}

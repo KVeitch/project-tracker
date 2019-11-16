@@ -1,7 +1,8 @@
 import React, { Component }from 'react';
-import LoginForm  from '../LoginForm/LoginForm';
-import IssuesContainer from '../IssuesContainer/IssuesContainer'
-import './App.css';
+import IssuesContainer from '../IssuesContainer/IssuesContainer';
+import Nav from '../Nav/Nav';
+import IssueContainer from '../IssuesContainer/IssuesContainer';
+import './App.scss';
 
 class App extends Component {
   constructor() {
@@ -9,27 +10,28 @@ class App extends Component {
     this.state= {
       isProject:true,
       isLoggedIn:false,
-
     }
   }
 
-
-  render () {
+  render = () => {
     const { isProject } = this.state;
-    if(isProject) {
+      if (isProject) {
+          return (
+          <div className="App">
+              <Nav />
+              <IssuesContainer />
+            </div>
+          )
+      }
       return (
         <div className="App">
-          <IssuesContainer />
-        </div>
-      )
-
-    }
-    return (
-      <div className="App">
-      <LoginForm />
-    </div>
-  );
+          Bot
+          <Nav />
+          <IssueContainer />
+      </div>
+    );
   }
+  
 }
 
 export default App;
