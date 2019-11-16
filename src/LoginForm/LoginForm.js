@@ -13,11 +13,25 @@ class LoginForm extends Component {
   render = () => {
     return (
       <form className='form__login'>
-        <div>
-          <input className='form__input--name'></input>
+        <div className='form__div--container'>
+          <input
+            className='form__input--name'
+            required
+            autocomplete='off'
+          ></input>
+          <label for='form__input--name' className='input__name--label label'>
+            <span className='content-name'>UserID</span>
+          </label>
         </div>
-        <div>
-          <input className="form__input--pass"></input>
+        <div className='form__div--container'>
+          <input type="password"
+            className='form__input--pass'
+            required
+            autocomplete='off'
+          ></input>
+          <label for='form__input--name' className='input__pass--label label'>
+            <span className='content-name'>Password</span>
+          </label>          
         </div>
         <button className='form__login--submit'>Login</button>
       </form>

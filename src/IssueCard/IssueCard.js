@@ -1,12 +1,14 @@
 import React from 'react';
-
-const IssueCard = ({title}) => {
+import './IssueCard.scss'
+const IssueCard = ({title, points, description, project}) => {
   return(
     <section className="section__issue">
-      <h2>{title}</h2>
-      <p>IssueDescription</p>
+      <h3>{project}</h3>
+      <h2 className="section__issue--title">{title}</h2>
+      <p className="section__issue--description">{description}</p>
       <footer>
-        <p>Pts:<span className="section__footer--points">1-8</span></p> <button type="button">Full Description</button>
+        <p>Pts:<span className="section__footer--points"> {points}</span></p>
+        <button type="button">Full Description</button>
       </footer>
     </section>
   )
