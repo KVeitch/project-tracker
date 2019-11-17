@@ -1,37 +1,35 @@
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 import IssuesContainer from '../IssuesContainer/IssuesContainer';
 import Nav from '../Nav/Nav';
-import IssueContainer from '../IssuesContainer/IssuesContainer';
 import './App.scss';
 
 class App extends Component {
   constructor() {
-    super()
-    this.state= {
-      isProject:true,
-      isLoggedIn:false,
-    }
+    super();
+    this.state = {
+      isProject: true,
+      isLoggedIn: false,
+    };
   }
 
   render = () => {
     const { isProject } = this.state;
-      if (isProject) {
-          return (
-          <div className="App">
-              <Nav />
-              <IssuesContainer />
-            </div>
-          )
-      }
+    if (isProject) {
       return (
-        <div className="App">
-          Bot
+        <div className='App'>
           <Nav />
-          <IssueContainer />
+          <IssuesContainer />
+        </div>
+      );
+    }
+    return (
+      <div className='App'>
+        Bot
+        <Nav />
+        <IssuesContainer />
       </div>
     );
-  }
-  
+  };
 }
 
 export default App;
