@@ -5,37 +5,35 @@
   height: 75px;
   width: 200px;
   height: 50px;
-  margin-bottom:10px;
-  overflow:hidden;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .form__login input {
   width: 100%;
-  height:100%;
+  height: 100%;
   color: $formText;
-  // padding-top: 20px;
   border: none;
-  font-size: 16px;;
-  outline:none;
-
+  font-size: 16px;
+  outline: none;
 }
 
 .form__login label {
   position: absolute;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height:100%;
+  height: 100%;
   pointer-events: none;
-  border-bottom:1px solid black
+  border-bottom: 1px solid black;
 }
 
 .form__login label::after {
-  content:'';
+  content: '';
   position: absolute;
-  bottom:-1px;
-  left:0;
-  height:100%;
+  bottom: -1px;
+  left: 0;
+  height: 100%;
   width: 100%;
   border-bottom: 3px solid $formHighlight;
   transform: translateX(-100%);
@@ -43,28 +41,27 @@
 }
 
 .content-name {
-  position:absolute;
+  position: absolute;
   bottom: 5px;
   left: 0;
   transition: all 0.3s ease;
 }
 
-
-.form__login input:focus +.label .content-name,
-.form__login input:valid + .label .content-name
-{
+.form__login input:focus + .label .content-name,
+.form__login input:valid + .label .content-name {
   transform: translateY(-150%);
-  font-size:14px;
-  color:$formHighlight;
+  font-size: 14px;
+  color: $formHighlight;
 }
 
-.form__login input:focus + .label::after, .form__login input:valid +.label::after {
-  transform:translateX(0%)
+.form__login input:focus + .label::after,
+.form__login input:valid + .label::after {
+  transform: translateX(0%);
 }
 
 .form__login--submit {
-  width:100%;
-  height:30px;
-  font-size:1em;
-  border-radius:$br;
+  width: 100%;
+  height: 30px;
+  font-size: 1em;
+  border-radius: $br;
 }
