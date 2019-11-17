@@ -6,7 +6,8 @@ class LoginForm extends Component {
     super();
     this.state = {
       name: '',
-      password: ''
+      password: '',
+      hasError:false,
     };
   }
 
