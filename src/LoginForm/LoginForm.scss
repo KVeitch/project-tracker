@@ -64,4 +64,10 @@
   height: 30px;
   font-size: 1em;
   border-radius: $br;
+  background-color: #eeeeee;
+  transition: 0.25s ease-in;
+}
+
+.form__login--submit:hover {
+  background-color: lightseagreen;
 }
